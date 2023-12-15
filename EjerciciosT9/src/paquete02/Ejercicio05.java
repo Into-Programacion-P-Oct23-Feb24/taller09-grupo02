@@ -27,28 +27,26 @@ public class Ejercicio05 {
         String[] estudiantes = {"Kimberly", "Hogan",
             "Teresa", "Luis", "Mark", "Jennifer",
             "Alcides"};
-        String inicial;
-        char inicialLetra;
-        boolean bandera = true;
-        while (bandera) {
-            System.out.println("Ingrese una letra");
-            inicial = entrada.nextLine().toUpperCase();
-            // utilizamos un swich para selecionar las iniciales de los nombres, 
-            //de esa manera salir del ciclo de no serlo , lo pedira hasta que
-            //salga del ciclo y bandera se haga falso 
-            switch (inicial) {
-                case ("K"):
-                case ("H"):
-                case ("T"):
-                case ("L"):
-                case ("M"):
-                case ("J"):
-                case ("A"):
-                    bandera = false;
-                    break;
-                default:
-            }
 
+        String inicial;
+        char[] inicialLetra = new char[7];
+        char letra;
+        boolean bandera = true;
+
+        for (int i = 0; i < estudiantes.length; i++) {
+            inicialLetra[i] = estudiantes[i].charAt(0);
+        }
+
+        while (bandera) {
+
+            System.out.println("Ingrese una letra");
+            inicial = entrada.nextLine();
+            letra = inicial.charAt(0);
+            for (int i = 0; i < estudiantes.length; i++) {
+                if (letra == (inicialLetra[i])) {
+                    bandera = false;
+                }
+            }
         }
 
     }
