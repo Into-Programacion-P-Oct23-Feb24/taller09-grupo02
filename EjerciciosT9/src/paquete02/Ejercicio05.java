@@ -29,6 +29,7 @@ public class Ejercicio05 {
             "Alcides"};
 
         String inicial;
+        //  Se crea el arreglo que contiene los 7 elementos del arreglo
         char[] inicialLetra = new char[7];
         char letra;
         boolean bandera = true;
@@ -40,7 +41,7 @@ public class Ejercicio05 {
         while (bandera) {
 
             System.out.println("Ingrese una letra");
-            inicial = entrada.nextLine();
+            inicial = entrada.nextLine().toUpperCase();
             letra = inicial.charAt(0);
             for (int i = 0; i < estudiantes.length; i++) {
                 if (letra == (inicialLetra[i])) {

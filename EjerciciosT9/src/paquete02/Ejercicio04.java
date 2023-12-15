@@ -22,7 +22,6 @@ public class Ejercicio04 {
             "Juan Vasquez"};
         String[] promediosCualitativos = new String[7];
 
-        // Damos inicio con el ciclo "for"
         for (int i = 0; i < promedios.length; i++) {
 
             // Inicializamos un if para poner un rango y asi identificar los

@@ -23,8 +23,9 @@ public class Ejercicio02 {
         int[] valoresRangos = new int[4]; // {0, 0, 0, 0, 0}
         int respuesta;
         
-        // A esta le añadimos una variable de tipo entero, para aumentar los 
-        // valores que no son correspondidos.
+        // A esta le añadimos una variable de tipo entero, para compilar los 
+        // valores que no son correspondidos en las condiciones ya 
+        // preestablecidas.
         int fuera_de_rango = 0;
 
         for (int i = 0; i < respuestas.length; i++) {
@@ -41,10 +42,11 @@ public class Ejercicio02 {
                         if ((respuesta >= 16) && (respuesta <= 20)) {
                             valoresRangos[3] = valoresRangos[3] + 1;
                         } else {
-                            // AL else final van los valores que no ingresaron 
-                            // dentro de los rangos y aumentamos lo que es la variable.
+                            // AL "else" final se asignan los valores que no
+                            // ingresaron dentro de los rangos y aplicamos un 
+                            // contador a la variable.
                           
-                            fuera_de_rango++;
+                            fuera_de_rango = fuera_de_rango + 1;
                         }
 
                     }
@@ -57,7 +59,7 @@ public class Ejercicio02 {
             System.out.printf("Rango %s - valor %d\n", rangos[i],
                     valoresRangos[i]);
         }
-        // Presentamos a continuacion los valores fuera de rango.
+        // Presentamos a continuacion los valores fuera de rango con un Print.
         System.out.printf("Valores fuera de rango: %d\n",
                 fuera_de_rango);
 

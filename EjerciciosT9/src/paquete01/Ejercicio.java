@@ -21,10 +21,10 @@ public class Ejercicio {
         String marca = "";
         String mensajeFinal = "";
         
-
+        //Se ingresa por teclado la cantidad a asignarse para iniciar el arreglo
         System.out.println("Ingrese el numero de vehiculos a ingresar");
         numeroElementos = entrada.nextInt();
-
+        //Se asigna la variable para guardar los datos ingresados por teclado
         vehiculos = new String[numeroElementos];
         int contador = 0;
         entrada.nextLine();
@@ -32,7 +32,7 @@ public class Ejercicio {
         while (contador < numeroElementos) {
             System.out.println("Ingrese la marca de vehiculos");
             marca = entrada.nextLine();
-            
+            //Se crea la restriccion de letras que NO SE PUEDEN INGRESAR
             String inicial = marca.substring(0, 1);
             if ("A".equals(inicial) || "C".equals(inicial)
                     || "T".equals(inicial)) {
@@ -43,7 +43,7 @@ public class Ejercicio {
             }
 
         }
-
+        //Se presenta en pantalla los datos ingresados en una cadena 
         for (int i = 0; i < vehiculos.length; i++) {
             mensajeFinal = String.format("%s\n%s", mensajeFinal, vehiculos[i]);
         }
